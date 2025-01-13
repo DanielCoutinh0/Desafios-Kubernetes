@@ -22,31 +22,31 @@ Nesse repositório você encontrará uma série de desafios kubernetes.
 1. Crie um pod chamado "my-pod" usando uma imagem simples como "nginx" e verifique seu estado com os comandos de monitoramento do Kubernetes. - [PrimeiroDesafio](#primeirodesafio)
 </br>
 
-2. Implante um Deployment chamado "my-deployment" com três réplicas de uma aplicação baseada na imagem "httpd". Atualize a imagem do Deployment para uma versão mais recente.
+2. Implante um Deployment chamado "my-deployment" com três réplicas de uma aplicação baseada na imagem "httpd". Atualize a imagem do Deployment para uma versão mais recente. - [SegundoDesafio](#segundodesafio)
 </br>
 
-3. Crie um ConfigMap chamado "app-config" com uma variável de configuração personalizada. Monte o ConfigMap em um pod e verifique se o valor foi aplicado corretamente.
+3. Crie um ConfigMap chamado "app-config" com uma variável de configuração personalizada. Monte o ConfigMap em um pod e verifique se o valor foi aplicado corretamente. - [TerceiroDesafio](#terceirodesafio)
 </br>
 
-4. Crie um Secret chamado "app-secret" contendo informações sensíveis. Injete o Secret como uma variável de ambiente em um pod e teste se está acessível.
+4. Crie um Secret chamado "app-secret" contendo informações sensíveis. Injete o Secret como uma variável de ambiente em um pod e teste se está acessível. - [QuartoDesafio](#quartodesafio)
 </br>
 
-5. Configure um PersistentVolume de 1Gi de armazenamento local e vincule-o a um PersistentVolumeClaim. Monte o volume em um pod e salve arquivos para verificar a persistência.
+5. Configure um PersistentVolume de 1Gi de armazenamento local e vincule-o a um PersistentVolumeClaim. Monte o volume em um pod e salve arquivos para verificar a persistência. - [QuintoDesafio](#quintodesafio)
 </br>
 
-6. Crie um serviço do tipo ClusterIP para um Deployment chamado "backend" e teste a conectividade interna entre pods usando o nome do serviço.
+6. Crie um serviço do tipo ClusterIP para um Deployment chamado "backend" e teste a conectividade interna entre pods usando o nome do serviço. - [SextoDesafio](#sextodesafio)
 </br>
 
-7. Implante um Job chamado "batch-job" que execute um comando simples e termine. Verifique os logs do Job para confirmar sua execução.
+7. Implante um Job chamado "batch-job" que execute um comando simples e termine. Verifique os logs do Job para confirmar sua execução. - [SetimoDesafio](#setimodesafio)
 </br>
 
-8. Crie um Horizontal Pod Autoscaler para um Deployment chamado "hpa-deployment" e configure-o para escalar com base no uso de CPU. Aumente a carga e observe o escalonamento.
+8. Crie um Horizontal Pod Autoscaler para um Deployment chamado "hpa-deployment" e configure-o para escalar com base no uso de CPU. Aumente a carga e observe o escalonamento. - [OitavoDesafio](#oitavodesafio)
 </br>
 
-9. Crie um serviço do tipo NodePort para expor externamente um Deployment chamado "webapp". Acesse o serviço usando o endereço IP do Minikube e a porta atribuída.
+9. Crie um serviço do tipo NodePort para expor externamente um Deployment chamado "webapp". Acesse o serviço usando o endereço IP do Minikube e a porta atribuída. - [NonoDesafio](#nonodesafio)
 </br>
 
-10. Crie um pod chamado "restart-pod" com a política de reinício configurada como "OnFailure". Provoque uma falha no pod e observe seu comportamento.
+10. Crie um pod chamado "restart-pod" com a política de reinício configurada como "OnFailure". Provoque uma falha no pod e observe seu comportamento. - [DécimoDesafio](#décimodesafio)
 
 ## PrimeiroDesafio 
 <P>Crie um pod chamado "my-pod”</P>
@@ -65,7 +65,7 @@ kubectl logs my-pod
 ```
 </br>
 
-<h2>2°- Desafio :</h2>
+## SegundoDesafio
 <p></p>Implante um Deployment chamado "my-deployment”</p>
 </br>
 Criar com 3 réplicas da imagem httpd:
@@ -86,7 +86,7 @@ kubectl rollout status deployment/my-deployment
 
 </br>
 
-<h2>3°- Desafio :</h2>
+## TerceiroDesafio
 <p>ConfigMap “APP-CONFIG”</p>
 </br>
 Criar o ConfigMap usando a linha de comando:
@@ -145,7 +145,7 @@ kubectl exec -it configmap-pod -- env
 
 </br>
 
-<h2>4°- Desafio :</h2>
+## QuartoDesafio
 <p>Secret “App-Secret”</p>
 </br>
 Criar o Secret com dados sensíveis
@@ -202,7 +202,7 @@ kubectl exec -it secret-pod -- env
 
 </br>
 
-<h2>5°- Desafio :</h2>
+## QuintoDesafio
 PersistentVolume e PersistentVolumeClaim
 </br>
 Criar um PersistentVolume (PV)
@@ -262,7 +262,7 @@ kubectlet pvc
 
 </br>
 
-<h2>6°- Desafio :</h2>
+## SextoDesafio
 Serviço do tipo ClusterIP
 </br>
 Criar um Deployment
@@ -340,7 +340,7 @@ curl backend-service
 
 </br>
 
-<h2>7°- Desafio :</h2>
+## SetimoDesafio
 Job no Kubernetes
 </br>
 Criar o Job
@@ -394,7 +394,7 @@ Hello from the Kubernetes Job!
 
 </br>
 
-<h2>8°- Desafio :</h2>
+## OitavoDesafio
 Horizontal Pod Autoscaler (HPA)
 </br>
 Criar um Deployment
@@ -484,7 +484,7 @@ kubectl get deployments
 
 </br>
 
-<h2>9°- Desafio :</h2>
+## NonoDesafio
 Serviço NodePort
 </br>
 Crie um Deployment nginx, usando o comando:
@@ -537,7 +537,7 @@ minikube service webapp-service
 
 </br>
 
-<h2>10°- Desafio :</h2>
+## DécimoDesafio
 Criar o Pod com Política de Reinício "OnFailure”
 </br>
 Crie um arquivo chamado pod-restart-onfailure.yaml
