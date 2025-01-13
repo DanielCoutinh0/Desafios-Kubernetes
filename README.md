@@ -17,9 +17,9 @@ Nesse repositório você encontrará uma série de desafios kubernetes.
 
 ## Desafios
 
-➡️ desafio | 
+➡️ Desafios | 
 
-1. Crie um pod chamado "my-pod" usando uma imagem simples como "nginx" e verifique seu estado com os comandos de monitoramento do Kubernetes.
+1. Crie um pod chamado "my-pod" usando uma imagem simples como "nginx" e verifique seu estado com os comandos de monitoramento do Kubernetes. - [PrimeiroDesafio](#primeirodesafio)
 </br>
 
 2. Implante um Deployment chamado "my-deployment" com três réplicas de uma aplicação baseada na imagem "httpd". Atualize a imagem do Deployment para uma versão mais recente.
@@ -48,7 +48,7 @@ Nesse repositório você encontrará uma série de desafios kubernetes.
 
 10. Crie um pod chamado "restart-pod" com a política de reinício configurada como "OnFailure". Provoque uma falha no pod e observe seu comportamento.
 
-<h2>1°- Desafio :</h2>
+## PrimeiroDesafio 
 <P>Crie um pod chamado "my-pod”</P>
 </br>
 Comando para criar o pod
