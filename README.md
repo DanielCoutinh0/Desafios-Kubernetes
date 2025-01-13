@@ -555,31 +555,40 @@ spec:
     command: ["sh", "-c", "echo 'Hello, world!' && exit 1"]  # Comando para forçar falha
 ```
 
+Aplicar o YAML
+
+```
+kubectl apply -f pod-restart-onfailure.yaml
+```
+
+Verificar o Status do Pod
+
+```
+kubectl get pods
+```
+
+Verificar os Logs
+
+```
+kubectl logs restart-po
+```
+
+Você verá algo como
+
+```
+Hello, world!
+```
+
+Verificar a Reinicialização
+Depois de alguns segundos ou minutos, o Pod será reiniciado automaticamente. Você pode verificar o número de reinicializações com:
+
+```
+kubectl describe pod restart-pod
+```
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</br>
+</br>
 
 
 <h2>Referências :</h2>
